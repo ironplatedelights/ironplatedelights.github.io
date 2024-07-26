@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Restaurant Menus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://example.com/dark-theme-background.jpg') no-repeat center center/cover;
+            color: #fff;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(34, 34, 34, 0.8);
+            padding: 1em 0;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #f4a261;
+        }
+        header {
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        header h1 {
+            z-index: 1;
+            font-size: 2em;
+            margin: 0;
+        }
+        .content {
+            padding: 2em;
+            background-color: rgba(68, 68, 68, 0.8);
+            margin: 0 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .content h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+        .menu-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        .menu-item {
+            background-color: rgba(85, 85, 85, 0.8);
+            padding: 1em;
+            border-radius: 8px;
+            text-align: center;
+            width: calc(33% - 2em);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .menu-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .menu-item h3 {
+            margin: 0.5em 0;
+        }
+        .menu-item p {
+            font-size: 1em;
+            margin: 0;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+        .social-links {
+            text-align: center;
+            padding: 2em 0;
+        }
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #f4a261;
+        }
+        footer {
+            background-color: rgba(34, 34, 34, 0.8);
+            text-align: center;
+            padding: 1em 0;
+            font-size: 1em;
+        }
+        @media (max-width: 768px) {
+            .menu-item {
+                width: calc(50% - 2em);
+            }
+        }
+        @media (max-width: 480px) {
+            .menu-item {
+                width: calc(100% - 2em);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#lunch-menu">Lunch Menu</a>
+        <a href="#dinner-menu">Dinner Menu</a>
+    </nav>
+    <header>
+        <h1>Grand Restaurant</h1>
+    </header>
+    <div class="content" id="lunch-menu">
+        <h2>Lunch Menu</h2>
+        <div class="menu-group">
+            <div class="menu-item">
+                <img src="https://example.com/lunch1.jpg" alt="Lunch Item 1">
+                <h3>Grilled Chicken Salad</h3>
+                <p>A delicious mix of grilled chicken, fresh greens, and a tangy dressing.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://example.com/lunch2.jpg" alt="Lunch Item 2">
+                <h3>Pasta Primavera</h3>
+                <p>A classic pasta dish with seasonal vegetables and a light sauce.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://example.com/lunch3.jpg" alt="Lunch Item 3">
+                <h3>Club Sandwich</h3>
+                <p>A hearty sandwich with turkey, bacon, lettuce, and tomato.</p>
+            </div>
+        </div>
+    </div>
+    <div class="content" id="dinner-menu">
+        <h2>Dinner Menu</h2>
+        <div class="menu-group">
+            <div class="menu-item">
+                <img src="https://example.com/dinner1.jpg" alt="Dinner Item 1">
+                <h3>Steak Frites</h3>
+                <p>Juicy steak served with crispy fries and a side of vegetables.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://example.com/dinner2.jpg" alt="Dinner Item 2">
+                <h3>Seafood Paella</h3>
+                <p>A traditional Spanish dish with a variety of seafood and saffron rice.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://example.com/dinner3.jpg" alt="Dinner Item 3">
+                <h3>Roast Duck</h3>
+                <p>Succulent roast duck served with a rich sauce and seasonal vegetables.</p>
+            </div>
+        </div>
+    </div>
+    <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.openrice.com" target="_blank">OpenRice</a>
+    </div>
+    <footer>
+        &copy; 2024 Grand Restaurant. All rights reserved.
+    </footer>
+</body>
+</html>
